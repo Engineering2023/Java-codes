@@ -5,17 +5,15 @@ public class ElectricityBoardMain {
 
     private Map<String, String> electricityMap = new HashMap<>();
 
-    // Getter
+    
     public Map<String, String> getElectricityMap() {
         return electricityMap;
     }
 
-    // Setter
     public void setElectricityMap(Map<String, String> electricityMap) {
         this.electricityMap = electricityMap;
     }
 
-    // Requirement 1
     public int findCountOfConnectionsBasedOnTheConnectionType(String connectionType) {
         int count = 0;
         for (String type : electricityMap.values()) {
@@ -26,7 +24,6 @@ public class ElectricityBoardMain {
         return count == 0 ? -1 : count;
     }
 
-    // Requirement 2
     public List<String> findConnectionIdsBasedOnTheConnectionType(String connectionType) {
         List<String> ids = new ArrayList<>();
         for (Map.Entry<String, String> entry : electricityMap.entrySet()) {
@@ -37,7 +34,6 @@ public class ElectricityBoardMain {
         return ids;
     }
 
-    // Main method (for user interaction - typically provided in skeleton)
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ElectricityBoardMain eb = new ElectricityBoardMain();
